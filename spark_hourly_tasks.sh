@@ -15,7 +15,7 @@
 #	return $state
 # }
 #
-# . /fakepath/spark_hourly_tash.sh "$@"
+# . /fakepath/shell-scripts/spark_hourly_tash.sh "$@"
 
 export HADOOP_VERSION="3.0.0-cdh6.0.1"
 export JAVA_HOME="/usr/java/jdk1.8.0_181"
