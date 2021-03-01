@@ -5,6 +5,8 @@
 # 1/3/5个参数时，最后一个参数指定运行模式为local/yarn
 #
 # Usage:
+# # set maxRetryTimes if it needs to be retry after failing
+#
 # function main() { 
 # 	cmd_task1
 # 	state=$?
@@ -25,7 +27,12 @@ YMDHFORMAT="%Y%m%d%H"
 Y_M_DFORMAT="%Y-%m-%d"
 HourAgo="-1"
 
-maxRetryTimes=3
+if [[ $isRetry == 'true' ]]; then
+	maxRetryTimes=3
+else
+	maxRetryTimes=0
+fi
+
 sleepInterval=1m
 
 # ========function definition
