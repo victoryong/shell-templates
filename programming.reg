@@ -3,63 +3,49 @@ Windows Registry Editor Version 5.00
 ;--------sublime text--------
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Sublime Text]
 ""="Open in Sublime Text"
-"Icon"="C:\\Program Files\Sublime Text 3\sublime_text.exe"
+"Icon"="C:\\Program Files\\Sublime Text 3\\sublime_text.exe"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Sublime Text\command]
-""="C:\Program Files\Sublime Text 3\sublime_text.exe" "%V"
+""="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" \"%V\""
 
 [HKEY_CLASSES_ROOT\Directory\shell\Sublime Text]
-""="Open Folder in Sublime Text"
-"Icon"="C:\Program Files\Sublime Text 3\sublime_text.exe"
+""="Open in Sublime Text"
+"Icon"="C:\\Program Files\\Sublime Text 3\\sublime_text.exe"
 
 [HKEY_CLASSES_ROOT\Directory\shell\Sublime Text\command]
-""="C:\Program Files\Sublime Text 3\sublime_text.exe" "%V"
+""="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" \"%V\""
 
-;--------Windows terminal--------
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Windows Terminal]
-""="Open in Windows Terminal"
-"Icon"="C:\Users\victor\AppData\Local\Microsoft\WindowsApps\wt.exe"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Windows Terminal\command]
-""="C:\Users\victor\AppData\Local\Microsoft\WindowsApps\wt.exe" "-d" "%V"
-
-[HKEY_CLASSES_ROOT\Directory\shell\Windows Terminal]
-""="Open Folder in Windows Terminal"
-"Icon"="C:\Users\victor\AppData\Local\Microsoft\WindowsApps\wt.exe"
-
-[HKEY_CLASSES_ROOT\Directory\shell\Windows Terminal\command]
-""="C:\Users\victor\AppData\Local\Microsoft\WindowsApps\wt.exe" "-d" "%V"
 
 ;--------IDEA-----------
 [HKEY_CLASSES_ROOT\Directory\Background\shell\IntelliJ IDEA Community Edition]
 ""=Open in intelliJ IDEA
-"Icon"="d:\0\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin\idea64.exe"
+"Icon"="d:\\0\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2\\bin\\idea64.exe"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\IntelliJ IDEA Community Edition\command]
-""="d:\0\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin\idea64.exe" "%V"
+""="\"d:\\0\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2\\bin\\idea64.exe\" \"%V\""
 
 [HKEY_CLASSES_ROOT\Directory\shell\IntelliJ IDEA Community Edition]
-""=Open Folder in IDEA
-"Icon"="d:\0\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin\idea64.exe"
+""=Open in intelliJ IDEA
+"Icon"="d:\\0\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2\\bin\\idea64.exe"
 
 [HKEY_CLASSES_ROOT\Directory\shell\IntelliJ IDEA Community Edition\command]
-""="d:\0\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin\idea64.exe" "%1"
+""="\"d:\\0\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2020.2\\bin\\idea64.exe\" \"%V\""
 
 
 ;--------pycharm--------
 [HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm Community Edition]
 ""=Open in PyCharm
-"Icon"=d:\0\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin\pycharm64.exe
+"Icon"="d:\\0\\Program Files\\JetBrains\\PyCharm Community Edition 2020.2\\bin\\pycharm64.exe"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm Community Edition\command]
-""="d:\0\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin\pycharm64.exe" "%V"
+""="\"d:\\0\\Program Files\\JetBrains\\PyCharm Community Edition 2020.2\\bin\\pycharm64.exe\" \"%V\""
 
 [HKEY_CLASSES_ROOT\Directory\shell\PyCharm Community Edition]
-""=Open Folder in PyCharm
-"Icon"=d:\0\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin\pycharm64.exe
+""=Open in PyCharm
+"Icon"="d:\\0\\Program Files\\JetBrains\\PyCharm Community Edition 2020.2\\bin\\pycharm64.exe"
 
 [HKEY_CLASSES_ROOT\Directory\shell\PyCharm Community Edition\command]
-""="d:\0\Program Files\JetBrains\PyCharm Community Edition 2020.2\bin\pycharm64.exe" "%1"
+""="\"d:\\0\\Program Files\\JetBrains\\PyCharm Community Edition 2020.2\\bin\\pycharm64.exe\" \"%V\""
 
 
 
