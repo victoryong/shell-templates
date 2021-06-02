@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Usage:
+#   
+# testPrcExists 'jupyter'
+# if [ $? -eq 1 ]; then
+#   [ some commands to be executed... ] 
+# fi
+#
+# crontab -e  ==>  @reboot . shutup.sh
+
+
 . /etc/profile
 . /etc/bashrc
 
@@ -15,21 +25,14 @@ function testPrcExists(){
   ps_res=`ps -ef |grep ${grep_expr}`
   # echo ps_res: $ps_res
 
+  # if just one arg, check the ps result length
   if [[ $# == 1 ]]; then
-    i=0
-    for e in $ps_res; do
-      i=$((i+1))
-    done
-    # echo i: $i
-
-    if [ $i -gt 10 ]; then
-      # echo hhahahahha
-      return 0
-    fi
-    # echo nononnono
+    ps_res_len=`tmp=(${ps_res[@]});echo ${#tmp[@]}`
+    if [ $ps_res_len -gt 10 ]; then return 0; fi
     return 1
   fi
 
+  # if there are more than one args, check substring using the second arg
   check_str=$2
   check_res=`echo $ps_res | grep $check_str`
   if [[ $check_res != "" ]]; then
