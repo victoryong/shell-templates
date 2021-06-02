@@ -2,21 +2,23 @@
 
 # Usage:
 #   
-# testPrcExists 'jupyter'
+# test_prc_exists 'jupyter'
 # if [ $? -eq 1 ]; then
 #   [ some commands to be executed... ] 
 # fi
 #
-# crontab -e  ==>  @reboot . shutup.sh
+# crontab -e  ==>  @reboot . shutup.sh > ~/log/autoShutup.log 2 >&1
 
 # Requires:
-# log.sh
+# -- log.sh
+
 
 . /etc/profile
 . /etc/bashrc
+. ~/.bashrc
 
 
-function testPrcExists(){
+function test_prc_exists(){
   # if $#==1, check if there exists more than one relavant processes, if $#==2, use the first one to be the grep expression and use the second one to check string existance.
   # return 0 if exists, while 1 represents non-exists
 
@@ -47,10 +49,10 @@ function testPrcExists(){
 function shutup_prc(){
   # define tasks 
 
-  testPrcExists 'jupyter'
+  test_prc_exists 'jupyter'
   if [ $? -eq 1 ]; then
-    log_info 'launch jupyter notebook...'
-    su -c "nohup jupyter notebook &" victor
+    log_info 'launching jupyter notebook...'
+    su -c "nohup jupyter notebook > ~/log/jupyter.log 2>&1 &" victor
   fi
 
 
