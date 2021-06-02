@@ -47,13 +47,15 @@ function shutup_prc(){
 
   testPrcExists 'jupyter'
   if [ $? -eq 1 ]; then
-    echo 'launch jupyter notebook...'
+    log_info 'launch jupyter notebook...'
     su -c "nohup jupyter notebook &" victor
   fi
 
 
   # end define tasks
-  echo 'launch finished! '
+  log_info 'launch finished! '
 }
 
+. utils.sh
+LOGGER_NAME=AutoShutup
 shutup_prc
