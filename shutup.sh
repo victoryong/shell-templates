@@ -9,6 +9,8 @@
 #
 # crontab -e  ==>  @reboot . shutup.sh
 
+# Requires:
+# log.sh
 
 . /etc/profile
 . /etc/bashrc
@@ -56,6 +58,6 @@ function shutup_prc(){
   log_info 'launch finished! '
 }
 
-. utils.sh
+. log.sh
 LOGGER_NAME=AutoShutup
 shutup_prc
