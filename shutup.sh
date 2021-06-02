@@ -7,7 +7,7 @@
 #   [ some commands to be executed... ] 
 # fi
 #
-# crontab -e  ==>  @reboot . shutup.sh > ~/log/autoShutup.log 2 >&1
+# crontab -e  ==>  @reboot . shutup.sh > ~/log/autoShutup.log 2>&1
 
 # Requires:
 # -- log.sh
