@@ -1,20 +1,27 @@
 #!/bin/bash
 
 # Usage:
-#   crontab -e  ==>  @reboot . shutup.sh > ~/log/autoShutup.log 2>&1
+#   crontab -e  ==>  @reboot . ${shell_dir}/shutup.sh > ~/log/autoShutup.log 2>&1
 # Requires:
 #   log.sh
 
+#### variables that must be set before use this script:
+shell_dir='/data/script'
+logger_name=AutoShutup
+logger_level='INFO'
+
+# import env variables
 source /etc/profile
 source /etc/bashrc
 source ~/.bashrc
 
 # import other scripts
-SHELL_DIR='.'  # define this variable according to your real shell script path!!
+source ${shell_dir}/log.sh
 
-source ${SHELL_DIR}/log.sh
-LOGGER_NAME=AutoShutup
-# set_level 'DEBUG'
+# init
+LOGGER_NAME=$logger_name
+set_level $logger_level
+
 
 # Usage:
 #   test_prc_exists jupyter; if [ $? -eq 1 ]; then [ some commands to be executed... ]; fi 
